@@ -1,0 +1,13 @@
+name: Daily Task
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # يشغّل كل يوم الساعة 8 صباحًا بتوقيت UTC
+  workflow_dispatch:      # يشغّله يدويًا من الزر Run workflow
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a message
+        run: echo "Good morning, Hager! ☀️ This is your daily GitHub Action running."
